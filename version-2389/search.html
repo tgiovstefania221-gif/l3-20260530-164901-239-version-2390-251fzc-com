@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="站内搜索页，可按关键词、类型和年份筛选全站影片。">
+  <meta name="keywords" content="搜索,日韩电影,影片搜索,类型筛选,年份筛选">
+  <meta name="theme-color" content="#e11d48">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="https://young-band-ba97.laodayizhi.workers.dev/ads-widget.js"></script>
+<title>搜索 - 日韩电影</title>
+  <link rel="stylesheet" href="assets/site.css">
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?60fa60a3da050a73eefefaaebe0afaf5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="navbar">
+      <a class="brand" href="index.html" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <strong>日韩电影</strong>
+          <span>免费精选片库</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a data-nav class="" href="index.html">首页</a><a data-nav class="" href="categories.html">分类总览</a><a data-nav class="" href="ranking.html">排行榜</a><a data-nav class="active" href="search.html">搜索</a>
+      </nav>
+      <div class="nav-actions">
+        <form class="nav-search desktop-only" action="search.html" method="get">
+          <div class="nav-search">
+            <input name="q" type="search" placeholder="搜索影片、年份、类型">
+          </div>
+        </form>
+        <a class="icon-btn desktop-only" href="search.html" title="打开搜索">⌕</a>
+        <button class="menu-btn" type="button" data-menu-btn aria-expanded="false" aria-label="展开菜单">☰</button>
+      </div>
+    </div>
+    <div class="mobile-panel" data-mobile-panel>
+      <form class="nav-search" action="search.html" method="get" style="margin-bottom:12px;">
+        <div class="nav-search" style="width:100%;">
+          <input name="q" type="search" placeholder="搜索影片、年份、类型">
+        </div>
+      </form>
+      <div class="mobile-links">
+        <a data-nav class="" href="index.html">首页</a><a data-nav class="" href="categories.html">分类总览</a><a data-nav class="" href="ranking.html">排行榜</a><a data-nav class="active" href="search.html">搜索</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <h1>全站搜索</h1>
+      <p>输入片名、标签、年份或类型即可检索 2000 部影片，并快速跳转到真实详情页。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-search-page>
+  <div class="container">
+    <div class="section-box">
+      <div class="search-bar">
+        <div class="search-input">
+          <input data-search-input type="search" placeholder="搜索影片、年份、标签、地区">
+        </div>
+        <select class="chip" data-search-year>
+          <option value="all">全部年份</option>
+          <option value="2030">2030 年</option><option value="2029">2029 年</option><option value="2028">2028 年</option><option value="2027">2027 年</option><option value="2026">2026 年</option><option value="2025">2025 年</option><option value="2024">2024 年</option><option value="2023">2023 年</option><option value="2022">2022 年</option><option value="2021">2021 年</option><option value="2020">2020 年</option><option value="2019">2019 年</option>
+        </select>
+      </div>
+      <div class="chip-row" style="margin-top:14px;">
+        <button class="chip active" type="button" data-search-chip="all">全部</button><button class="chip" type="button" data-search-chip="剧情">剧情</button><button class="chip" type="button" data-search-chip="喜剧">喜剧</button><button class="chip" type="button" data-search-chip="动作">动作</button><button class="chip" type="button" data-search-chip="爱情">爱情</button><button class="chip" type="button" data-search-chip="悬疑">悬疑</button><button class="chip" type="button" data-search-chip="科幻">科幻</button><button class="chip" type="button" data-search-chip="恐怖">恐怖</button><button class="chip" type="button" data-search-chip="奇幻">奇幻</button><button class="chip" type="button" data-search-chip="犯罪">犯罪</button><button class="chip" type="button" data-search-chip="惊悚">惊悚</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">搜索 <span class="accent">结果</span></h2>
+        <p class="section-subtitle">当前显示 <strong data-search-count>0</strong> 条结果，默认取前 60 项展示。</p>
+      </div>
+    </div>
+    <div class="grid cards-4" data-search-results></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-box">
+      <div>
+        <strong>日韩电影</strong>
+        <small>免费日韩电影 · 精选电影合集 · 高清影片在线观看</small>
+      </div>
+      <div>
+        <small>内容总量：2000 部</small>
+        <small>分类总览：11 个独立页面</small>
+      </div>
+      <div>
+        <small>最近更新：2030 年片库</small>
+        <small>© 日韩电影</small>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.18/dist/hls.min.js"></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
